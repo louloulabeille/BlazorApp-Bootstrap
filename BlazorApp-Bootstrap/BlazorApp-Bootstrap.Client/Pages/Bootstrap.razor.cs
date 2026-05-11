@@ -9,6 +9,8 @@ namespace BlazorApp_Bootstrap.Client.Pages
         public int Section { get; set; }
         [Parameter]
         public string? Partie { get; set; }
+        [Parameter]
+        public int? Exemple { get; set; }
         #endregion
 
     }
