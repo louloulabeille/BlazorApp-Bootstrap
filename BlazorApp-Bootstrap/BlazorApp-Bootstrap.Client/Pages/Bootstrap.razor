@@ -1,0 +1,43 @@
+﻿@page "/bootstrap"
+@page "/bootstrap/{Section:int}/{Partie}"
+
+@inherits BootstrapBase
+
+@rendermode InteractiveAuto
+
+
+@if (Section == 1 && Partie == "container")
+{
+    <!-- class="container" largeur fixe par rapport au breakpoints du viewport -->
+    <!-- class="container-fluid" largeur 100% du viewport -->
+
+    <div class="container" style="background-color: aquamarine">
+        <h1>Ma page Bootstrap</h1>
+        <p>Mon premier paragraphe Bootstrap</p>
+    </div>
+}
+
+@if( Section == 1 && Partie == "breakPoints" )
+{
+    <!--
+            Super petit <576px  Petit ≥576px    Moyen ≥768px    Grand ≥992px    X - Grand ≥1200px   XX - Grand ≥1400px
+.container              100 %   540px           720px           960px           1140px              1320px
+.container - sm         100 %   540px           720px           960px           1140px              1320px
+.container - md         100 %   100 %           720px           960px           1140px              1320px
+.container - lg         100 %   100 %           100 %           960px           1140px              1320px
+.container - xl         100 %   100 %           100 %           100 %           1140px              1320px
+.container - xxl        100 %   100 %           100 %           100 %           100 %               1320px
+.container - fluid      100 %   100 %           100 %           100 %           100 %               100 %
+
+-->
+
+    <div class="container-md" style="background-color: aquamarine">
+        <h1>Ma page Bootstrap</h1>
+        <p>Mon premier paragraphe Bootstrap</p>
+    </div>
+}
+
+@if( Section == 1 && Partie == "gridSystem" )
+{
+    
+}
