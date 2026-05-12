@@ -7,7 +7,7 @@
 @rendermode InteractiveAuto
 
 
-@if (Section == 1 && Partie == "container" && Exemple is null)
+@if (Section == 2 && Partie == "container" && Exemple is null)
 {
     <PageTitle>Container</PageTitle>
     <!-- class="container" largeur fixe par rapport au breakpoints du viewport -->
@@ -19,7 +19,7 @@
     </div>
 }
 
-@if( Section == 1 && Partie == "breakPoints" && Exemple is null )
+@if( Section == 2 && Partie == "breakPoints" && Exemple is null )
 {
     <PageTitle>Break points</PageTitle>
     <!--
@@ -40,7 +40,7 @@
     </div>
 }
 
-@if( Section == 1 && Partie == "gridSystem" && Exemple is null )
+@if( Section == 2 && Partie == "gridSystem" && Exemple is null )
 {
     <PageTitle>Grid System</PageTitle>
 
@@ -61,7 +61,7 @@
     </div>
     
 }
-else if (Section == 1 && Partie == "gridSystem" && Exemple == 2 )
+else if (Section == 2 && Partie == "gridSystem" && Exemple == 2 )
 {
     <PageTitle>Grid System Exemple 2</PageTitle>
 
@@ -123,7 +123,7 @@ else if (Section == 1 && Partie == "gridSystem" && Exemple == 2 )
     </div>
 }
 
-@if (Section == 1 && Partie == "typography" && Exemple is null)
+@if (Section == 2 && Partie == "typography" && Exemple is null)
 {
     <!-- voir documentation bootstrap https://bootstrap21.org/fr/docs/5.2/content/typography/ 
         pour voir les autres typo qui existent
@@ -150,4 +150,50 @@ else if (Section == 1 && Partie == "gridSystem" && Exemple == 2 )
             </blockquote>
         </div>
     </div>
+}
+
+@if (Section == 2 && Partie == "formulaire" && Exemple is null)
+{
+    <EditForm Model="Login" OnInvalidSubmit="Validate">
+        <DataAnnotationsValidator />
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <InputText @bind-Value="Login.LoginEmail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <small>
+                <ValidationMessage For="()=>Login.LoginEmail"/>
+            </small>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <!-- pour avoir le text plus petit -sm -->
+            <InputText @bind-Value="Login.Password" type="password" class="form-control form-control-sm" id="exampleInputPassword1" />
+            <div id="passwordHelpBlock" class="form-text">
+                Your password must be 8-20 characters long, contain letters, numbers and special characters, and must not contain spaces or emoji.
+            </div>
+            <small>
+                <ValidationMessage For="() => Login.Password" />
+            </small>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+            <!-- class="form-control-lg" pour agrandir le input avec -lg  -->
+            <InputTextArea  @bind-Value="Login.TextArea" class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3"/>
+            <small>
+                <ValidationMessage For="()=> Login.TextArea"/>
+            </small>
+        </div>
+        <!-- class="form-select form-select-lg mb-3" rajoute mb-3 pour faire de la marge et form-select-lg pour l'agrandir par rapport à la taille par défaut -->
+        <InputSelect @bind-Value="Login.Selection" class="form-select form-select-lg mb-3" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </InputSelect>
+        <div class="mb-3 form-check">
+            <InputCheckbox @bind-Value="Login.CheckMe" type="checkbox" class="form-check-input" id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-secondary">Submit</button>
+    </EditForm>
 }

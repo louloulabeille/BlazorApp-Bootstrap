@@ -15,4 +15,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\BlazorApp-Bootstrap.Models\BlazorApp-Bootstrap.Models.csproj" />
+  </ItemGroup>
+
 </Project>

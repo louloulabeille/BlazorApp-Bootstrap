@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using BlazorApp_Bootstrap.Models.DTO;
+using Microsoft.AspNetCore.Components;
 
 namespace BlazorApp_Bootstrap.Client.Pages
 {
@@ -13,5 +14,18 @@ namespace BlazorApp_Bootstrap.Client.Pages
         public int? Exemple { get; set; }
         #endregion
 
+        #region protected properties view
+        protected LoginDTO Login { get; set; } = new ();
+        #endregion
+
+
+        #region method view 
+
+        protected async Task Validate()
+        {
+
+        }
+
+        #endregion
     }
 }
