@@ -156,9 +156,10 @@ else if (Section == 2 && Partie == "gridSystem" && Exemple == 2 )
 {
     <EditForm Model="Login" OnInvalidSubmit="Validate">
         <DataAnnotationsValidator />
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <div class="form-floating mb-3">
+            
             <InputText @bind-Value="Login.LoginEmail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             <small>
                 <ValidationMessage For="()=>Login.LoginEmail"/>
@@ -175,6 +176,7 @@ else if (Section == 2 && Partie == "gridSystem" && Exemple == 2 )
                 <ValidationMessage For="() => Login.Password" />
             </small>
         </div>
+        <!-- textArea -->
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
             <!-- class="form-control-lg" pour agrandir le input avec -lg  -->
@@ -183,6 +185,35 @@ else if (Section == 2 && Partie == "gridSystem" && Exemple == 2 )
                 <ValidationMessage For="()=> Login.TextArea"/>
             </small>
         </div>
+
+        <!-- check box -->
+        <div class="form-check">
+            <InputCheckbox @bind-Value="Login.CheckOption" type="checbox" class="form-check-input" id="flexCheckoptions" />
+            <label class="form-check-label" for="flexCheckoptions">
+                Options checkbox
+            </label>
+        </div>
+        <div class="form-check">
+            <InputCheckbox @bind-Value="Login.CheckView" type="checbox" class="form-check-input" id="flexCheckView" />
+            <label class="form-check-label" for="flexCheckView">
+                View checkbox
+            </label>
+        </div>
+        <!-- radio button -->
+        <InputRadioGroup @bind-Value="Login.Nickname" Name="nickname_prenom">
+            <p>Choisir son nickname</p>
+            @foreach (var name in (Prenom[])Enum.GetValues(typeof(Prenom)))
+            {
+                <div class="form-check">
+                    <InputRadio Value="name" id="@name" />
+                    <label class="form-check-label" for="@name">
+                        @name.ToString()
+                    </label>
+                </div>
+            }
+        </InputRadioGroup>
+
+        <!-- liste déroulante <select  -->
         <!-- class="form-select form-select-lg mb-3" rajoute mb-3 pour faire de la marge et form-select-lg pour l'agrandir par rapport à la taille par défaut -->
         <InputSelect @bind-Value="Login.Selection" class="form-select form-select-lg mb-3" aria-label="Default select example">
             <option selected>Open this select menu</option>
@@ -194,6 +225,16 @@ else if (Section == 2 && Partie == "gridSystem" && Exemple == 2 )
             <InputCheckbox @bind-Value="Login.CheckMe" type="checkbox" class="form-check-input" id="exampleCheck1"/>
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
+
+        <!-- input Range -->
+        <label for="customRange" class="form-label">Example range</label>
+        <input type="range" min="@RangeMinMax.Min" max="@RangeMinMax.Max" step="1" 
+        @bind-value="Login.Range" @bind-value:event="oninput"
+        class="form-range" id="customRange">
+        <p>@Login.Range</p>
+
+
+        <!-- button type submit -->
         <button type="submit" class="btn btn-secondary">Submit</button>
     </EditForm>
 }

@@ -5,6 +5,19 @@ using System.Text;
 
 namespace BlazorApp_Bootstrap.Models.DTO
 {
+    public enum Prenom
+    {
+        Hanna,
+        Lily,
+        Eva
+    }
+
+    public enum RangeMinMax
+    {
+        Min=0,
+        Max=100
+    }
+
     public class LoginDTO
     {
         [Required(ErrorMessage ="Email est obligatoire pour se connecter.")]
@@ -17,6 +30,17 @@ namespace BlazorApp_Bootstrap.Models.DTO
         [Required(ErrorMessage = "Le texte aréa est obligatoire.")]
         public string TextArea { get; set; } = string.Empty;
         public string Selection { get; set; } = string.Empty;
+
+
+        // - checkbox
+        public bool CheckOption { get; set; } = false;
+        public bool CheckView { get; set; } = false;
+
+        // - radiobutton
+        public Prenom Nickname { get; set; }
+
+        // - input range
+        public int Range { get; set; } = 12;
 
     }
 }
