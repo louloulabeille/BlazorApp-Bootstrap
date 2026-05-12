@@ -15,17 +15,9 @@ namespace BlazorApp_Bootstrap.Client.Pages
         #endregion
 
         #region protected properties view
+        [CascadingParameter(Name = "Login")]
         protected LoginDTO Login { get; set; } = new ();
         #endregion
 
-
-        #region method view 
-
-        protected async Task Validate()
-        {
-
-        }
-
-        #endregion
     }
 }
