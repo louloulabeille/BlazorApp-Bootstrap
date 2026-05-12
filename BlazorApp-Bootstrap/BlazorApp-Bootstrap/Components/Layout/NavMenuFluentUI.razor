@@ -15,7 +15,10 @@
                 </FluentNavGroup>
                 <FluentNavLink Icon="@(new Icons.Regular.Size24.NotebookQuestionMark())" Tooltip="Bootstrap typography" Href="bootstrap/2/typography">Typography</FluentNavLink>
                 <FluentNavLink Icon="@(new Icons.Regular.Size24.Form())" Tooltip="Bootstrap formulaire" Href="bootstrap/2/formulaire">Formulaire</FluentNavLink>
-                <FluentNavLink Icon="@(new Icons.Regular.Size24.Form())" Tooltip="Bootstrap button" Href="bootstrap/2/button">Buttons</FluentNavLink>
+                <FluentNavGroup Title="Buttons" Tooltip="Bootstrap button & group buttons" Icon="@(new Icons.Regular.Size20.Button())">
+                    <FluentNavLink Icon="@(new Icons.Regular.Size24.ControlButton())" Tooltip="Bootstrap button" Href="bootstrap/2/button">Button</FluentNavLink>
+                    <FluentNavLink Icon="@(new Icons.Regular.Size24.ControlButton())" Tooltip="Bootstrap group buttons" Href="bootstrap/2/button/2">Group Buttons</FluentNavLink>
+                </FluentNavGroup>
             </FluentNavGroup>
         </FluentNavMenu>
     </div>
