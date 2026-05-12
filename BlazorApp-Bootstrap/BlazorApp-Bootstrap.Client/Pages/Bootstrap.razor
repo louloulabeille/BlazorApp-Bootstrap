@@ -71,7 +71,7 @@ else if (Section == 2 && Partie == "gridSystem" && Exemple == 2 )
             <!-- pour tous les blocks supérieurs à 768 px environ tablette on prend 2 élements sur la même ligne  -->
             <!-- en même on veut sur les grand écran de plus de 992 px 3 colonnes sur la même ligne -->
             <!-- en même on veut sur les grand écran de plus de 1140 px 4 colonnes sur la même ligne -->
-            <div id="block1" class="col-md-6  col-lg-4 col-xl-3" style="border: 1px solid DarkMagenta">
+            <div id="block1" class="col-md-6 col-lg-4 col-xl-3" style="border: 1px solid DarkMagenta">
                 <h1>Ma page</h1>
                 <p>Mon premier paragraphe</p>
             </div>
@@ -169,4 +169,8 @@ else if (Section == 2 && Partie == "gridSystem" && Exemple == 2 )
 @if (Section == 2 && Partie == "image" && Exemple is null)
 {
     <BootstrapImage></BootstrapImage>
+}
+@if (Section == 2 && Partie == "icon" && Exemple is null)
+{
+    <BootstrapIcon></BootstrapIcon>
 }
