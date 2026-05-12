@@ -1,4 +1,6 @@
 <Solution>
+  <Project Path="BlazorApp-Bootstrap.Infrastructure/BlazorApp-Bootstrap.Infrastructure.csproj" Id="85ac103e-b8ab-4f0b-a4e2-ccf85c8d7227" />
+  <Project Path="BlazorApp-Bootstrap.Interface/BlazorApp-Bootstrap.Interface.csproj" Id="56250d25-9dfd-4aa9-bc5d-b06864854262" />
   <Project Path="BlazorApp-Bootstrap.Models/BlazorApp-Bootstrap.Models.csproj" />
   <Project Path="BlazorApp-Bootstrap/BlazorApp-Bootstrap.Client/BlazorApp-Bootstrap.Client.csproj" />
   <Project Path="BlazorApp-Bootstrap/BlazorApp-Bootstrap/BlazorApp-Bootstrap.csproj" />

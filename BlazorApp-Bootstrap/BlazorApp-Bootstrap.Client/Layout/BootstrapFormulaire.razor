@@ -1,4 +1,4 @@
-﻿<EditForm Model="Login" OnInvalidSubmit="Validate">
+﻿<EditForm Model="Login" OnValidSubmit="Validate">
     <DataAnnotationsValidator />
     <div class="form-floating mb-3">
             
@@ -83,15 +83,21 @@
 </EditForm>
 
 @code{
-    [CascadingParameter(Name = "Login")]
-    protected LoginDTO Login { get; set; } = new();
+    #region public properties
+    [Parameter]
+    public LoginDTO Login { get; set; } = new();
+
+    [Parameter]
+    public EventCallback<LoginDTO> LoginChanged { get; set; }
+    #endregion
 
     #region method view
 
     protected async Task Validate()
     {
-
+        await LoginChanged.InvokeAsync(Login);
     }
+
 
     #endregion
 

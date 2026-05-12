@@ -1,4 +1,6 @@
 using BlazorApp_Bootstrap.Components;
+using BlazorApp_Bootstrap.Infrastructure;
+using BlazorApp_Bootstrap.Interface;
 using Microsoft.FluentUI.AspNetCore.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,8 +10,13 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
+// - mise en service de FluentUI 
 builder.Services.AddHttpClient();
 builder.Services.AddFluentUIComponents();
+// -
+
+// - injection de dépendance
+builder.Services.AddTransient<IManageForm,MemoryManageForm>();
 
 var app = builder.Build();
 
