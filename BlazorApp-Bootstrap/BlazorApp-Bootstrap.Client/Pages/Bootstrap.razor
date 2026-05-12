@@ -6,6 +6,17 @@
 
 @rendermode InteractiveAuto
 
+<!--
+            Super petit <576px  Petit ≥576px    Moyen ≥768px    Grand ≥992px    X - Grand ≥1200px   XX - Grand ≥1400px
+.container              100 %   540px           720px           960px           1140px              1320px
+.container - sm         100 %   540px           720px           960px           1140px              1320px
+.container - md         100 %   100 %           720px           960px           1140px              1320px
+.container - lg         100 %   100 %           100 %           960px           1140px              1320px
+.container - xl         100 %   100 %           100 %           100 %           1140px              1320px
+.container - xxl        100 %   100 %           100 %           100 %           100 %               1320px
+.container - fluid      100 %   100 %           100 %           100 %           100 %               100 %
+
+-->
 
 @if (Section == 2 && Partie == "container" && Exemple is null)
 {
@@ -21,135 +32,20 @@
 
 @if( Section == 2 && Partie == "breakPoints" && Exemple is null )
 {
-    <PageTitle>Break points</PageTitle>
-    <!--
-            Super petit <576px  Petit ≥576px    Moyen ≥768px    Grand ≥992px    X - Grand ≥1200px   XX - Grand ≥1400px
-.container              100 %   540px           720px           960px           1140px              1320px
-.container - sm         100 %   540px           720px           960px           1140px              1320px
-.container - md         100 %   100 %           720px           960px           1140px              1320px
-.container - lg         100 %   100 %           100 %           960px           1140px              1320px
-.container - xl         100 %   100 %           100 %           100 %           1140px              1320px
-.container - xxl        100 %   100 %           100 %           100 %           100 %               1320px
-.container - fluid      100 %   100 %           100 %           100 %           100 %               100 %
-
--->
-
-    <div class="container-md" style="background-color: aquamarine">
-        <h1>Ma page Bootstrap</h1>
-        <p>Mon premier paragraphe Bootstrap</p>
-    </div>
+    <BootstrapBreakPoints></BootstrapBreakPoints>
 }
-
 @if( Section == 2 && Partie == "gridSystem" && Exemple is null )
 {
-    <PageTitle>Grid System</PageTitle>
-
-    <div class="container">
-        <div class="row">
-
-            <!-- class="col-lg-6" on prend la class colonne dont la surface est divivée par 12 -->
-            <!-- ici on prend 6 et au col-lg à partir de lg >= 992px les 2 blocks seront côte à côte -->
-            <div id="block1" class="col-lg-6" style="border: 1px solid chocolate">
-                <h1>Ma page</h1>
-                <p>Mon premier paragraphe</p>
-            </div>
-            <div id="block2" class="col-lg-6" style="border: 1px solid chocolate">
-                <h1>Ma page</h1>
-                <p>Mon premier paragraphe</p>
-            </div>
-        </div>
-    </div>
-    
+    <BootstrapGridSystem></BootstrapGridSystem>
 }
 else if (Section == 2 && Partie == "gridSystem" && Exemple == 2 )
 {
-    <PageTitle>Grid System Exemple 2</PageTitle>
-
-    <div class="container">
-        <div class="row">
-
-            <!-- pour tous les blocks supérieurs à 768 px environ tablette on prend 2 élements sur la même ligne  -->
-            <!-- en même on veut sur les grand écran de plus de 992 px 3 colonnes sur la même ligne -->
-            <!-- en même on veut sur les grand écran de plus de 1140 px 4 colonnes sur la même ligne -->
-            <div id="block1" class="col-md-6 col-lg-4 col-xl-3" style="border: 1px solid DarkMagenta">
-                <h1>Ma page</h1>
-                <p>Mon premier paragraphe</p>
-            </div>
-            <div id="block2" class="col-md-6  col-lg-4 col-xl-3" style="border: 1px solid DarkMagenta">
-                <h1>Ma page</h1>
-                <p>Mon premier paragraphe</p>
-            </div>
-            <div id="block3" class="col-md-6  col-lg-4 col-xl-3" style="border: 1px solid DarkMagenta">
-                <h1>Ma page</h1>
-                <p>Mon premier paragraphe</p>
-            </div>
-            <div id="block4" class="col-md-6  col-lg-4 col-xl-3" style="border: 1px solid DarkMagenta">
-                <h1>Ma page</h1>
-                <p>Mon premier paragraphe</p>
-            </div>
-            <div id="block5" class="col-md-6  col-lg-4 col-xl-3" style="border: 1px solid DarkMagenta">
-                <h1>Ma page</h1>
-                <p>Mon premier paragraphe</p>
-            </div>
-            <div id="block6" class="col-md-6  col-lg-4 col-xl-3" style="border: 1px solid DarkMagenta">
-                <h1>Ma page</h1>
-                <p>Mon premier paragraphe</p>
-            </div>
-            <div id="block7" class="col-md-6  col-lg-4 col-xl-3" style="border: 1px solid DarkMagenta">
-                <h1>Ma page</h1>
-                <p>Mon premier paragraphe</p>
-            </div>
-            <div id="block8" class="col-md-6  col-lg-4 col-xl-3" style="border: 1px solid DarkMagenta">
-                <h1>Ma page</h1>
-                <p>Mon premier paragraphe</p>
-            </div>
-            <div id="block9" class="col-md-6  col-lg-4 col-xl-3" style="border: 1px solid DarkMagenta">
-                <h1>Ma page</h1>
-                <p>Mon premier paragraphe</p>
-            </div>
-            <div id="block10" class="col-md-6  col-lg-4 col-xl-3" style="border: 1px solid DarkMagenta">
-                <h1>Ma page</h1>
-                <p>Mon premier paragraphe</p>
-            </div>
-            <div id="block11" class="col-md-6  col-lg-4 col-xl-3" style="border: 1px solid DarkMagenta">
-                <h1>Ma page</h1>
-                <p>Mon premier paragraphe</p>
-            </div>
-            <div id="block12" class="col-md-6  col-lg-4 col-xl-3" style="border: 1px solid DarkMagenta">
-                <h1>Ma page</h1>
-                <p>Mon premier paragraphe</p>
-            </div>
-        </div>
-    </div>
+    <BootstrapGridSystem Exemple="@Exemple"></BootstrapGridSystem>
 }
 
 @if (Section == 2 && Partie == "typography" && Exemple is null)
 {
-    <!-- voir documentation bootstrap https://bootstrap21.org/fr/docs/5.2/content/typography/ 
-        pour voir les autres typo qui existent
-    -->
-    <div class="container-fluid">
-        <div class="row">
-            <p>Voici un paragraphe</p>
-            <h1>h1. Bootstrap heading</h1>
-            <h2>h2. Bootstrap heading</h2>
-            <h3>h3. Bootstrap heading</h3>
-            <h4>h4. Bootstrap heading</h4>
-            <h5>h5. Bootstrap heading</h5>
-            <h6>h6. Bootstrap heading</h6>
-
-            <!-- mettre en gris clair une partie du texte et en plus petit -->
-            <h3>
-                Fancy display heading
-                <small class="text-muted">With faded secondary text</small>
-            </h3>
-
-            <!-- blockquote && text center -->
-            <blockquote class="blockquote text-center">
-                <p>A well-known quote, contained in a blockquote element.</p>
-            </blockquote>
-        </div>
-    </div>
+    <BootstrapTypography></BootstrapTypography>
 }
 
 @if (Section == 2 && Partie == "formulaire" && Exemple is null)
