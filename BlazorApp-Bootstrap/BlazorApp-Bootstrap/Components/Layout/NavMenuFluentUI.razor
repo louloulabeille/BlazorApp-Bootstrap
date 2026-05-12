@@ -1,0 +1,27 @@
+﻿@using Icons = Microsoft.FluentUI.AspNetCore.Components.Icons
+
+<FluentStack Orientation="Orientation.Horizontal" Width="100%">
+    <div>
+        <FluentNavMenu @bind-Expanded="@Expanded" Width="250" Collapsible="true" CollapsedChildNavigation="@EnableCollapsedChildNavigation" Title="Bootstrap">
+            <FluentNavLink Icon="@(new Icons.Regular.Size24.Home())" Tooltip="Home default page" Href="/">Home</FluentNavLink>
+            <FluentNavLink Icon="@(new Icons.Regular.Size24.Calculator())" Tooltip="Counter" Href="counter">Counter</FluentNavLink>
+            <FluentNavGroup Title="Bootstrap section 2" Tooltip="Bootstrap Section 2" Icon="@(new Icons.Regular.Size24.EarthLeaf())" >
+                <FluentNavLink Icon="@(new Icons.Regular.Size24.LeafOne())" Tooltip="Bootstrap container" Href="bootstrap/2/container">Container</FluentNavLink>
+                <FluentNavLink Icon="@(new Icons.Regular.Size24.HandPoint())" Disabled="false" Tooltip="Bootstrap breakpoints" Href="bootstrap/2/breakPoints">
+                    Break points</FluentNavLink>
+                <FluentNavGroup Title="Grid System" Icon="@(new Icons.Regular.Size24.SlideGrid())" Tooltip="Bootstrap grid system" Disabled="false">
+                    <FluentNavLink Icon="@(new Icons.Regular.Size24.Grid())" Href="bootstrap/2/gridSystem" Tooltip="Gris system exmple 1">Exemple 1</FluentNavLink>
+                    <FluentNavLink Icon="@(new Icons.Regular.Size24.Grid())" Href="bootstrap/2/gridSystem/2" Tooltip="Grid system exemple 2">Exemple 2</FluentNavLink>
+                </FluentNavGroup>
+                <FluentNavLink Icon="@(new Icons.Regular.Size24.NotebookQuestionMark())" Tooltip="Bootstrap typography" Href="bootstrap/2/typography">Typography</FluentNavLink>
+                <FluentNavLink Icon="@(new Icons.Regular.Size24.Form())" Tooltip="Bootstrap formulaire" Href="bootstrap/2/formulaire">Formulaire</FluentNavLink>
+            </FluentNavGroup>
+        </FluentNavMenu>
+    </div>
+</FluentStack>
+
+@code
+{
+    bool Expanded = true;
+    bool EnableCollapsedChildNavigation = true;
+}
