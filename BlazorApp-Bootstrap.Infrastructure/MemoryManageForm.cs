@@ -8,10 +8,10 @@ namespace BlazorApp_Bootstrap.Infrastructure
 {
     public class MemoryManageForm : IManageForm
     {
-        public Task Save(LoginDTO loginDTO)
+        public async Task Save(LoginDTO loginDTO)
         {
             Console.WriteLine("Cela marche hoopi");
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 
