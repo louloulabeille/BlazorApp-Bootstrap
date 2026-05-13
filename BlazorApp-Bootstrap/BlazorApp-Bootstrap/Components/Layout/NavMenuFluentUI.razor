@@ -3,8 +3,11 @@
 <FluentStack Orientation="Orientation.Horizontal" Width="18%">
     <div style="background: var(--neutral-layer-3); display: flex; padding: 10px;">
         <FluentNavMenu @bind-Expanded="@Expanded" Width="250" Collapsible="true" CollapsedChildNavigation="@EnableCollapsedChildNavigation" Title="Bootstrap">
+            <!-- racine -->
             <FluentNavLink Icon="@(new Icons.Regular.Size24.Home())" Tooltip="Home default page" Href="/home">Home</FluentNavLink>
+            <!-- counter -->
             <FluentNavLink Icon="@(new Icons.Regular.Size24.Calculator())" Tooltip="Counter" Href="counter">Counter</FluentNavLink>
+            <!-- section 2 bootstrap -->
             <FluentNavGroup Title="Bootstrap section 2" Tooltip="Bootstrap Section 2" Icon="@(new Icons.Regular.Size24.EarthLeaf())" >
                 <FluentNavLink Icon="@(new Icons.Regular.Size24.LeafOne())" Tooltip="Bootstrap container" Href="bootstrap/2/container">Container</FluentNavLink>
                 <FluentNavLink Icon="@(new Icons.Regular.Size24.HandPoint())" Disabled="false" Tooltip="Bootstrap breakpoints" Href="bootstrap/2/breakPoints">
@@ -21,6 +24,11 @@
                 </FluentNavGroup>
                 <FluentNavLink Icon="@(new Icons.Regular.Size24.Image())" Tooltip="Bootstrap image" Href="bootstrap/2/image">Image</FluentNavLink>
                 <FluentNavLink Icon="@(new Icons.Regular.Size24.Icons())" Tooltip="Bootstrap icônes" Href="bootstrap/2/icon">Icônes</FluentNavLink>
+            </FluentNavGroup>
+            <!-- Section 3 bootstrap -->
+            <FluentNavGroup Title="Bootstrap section 3" Tooltip="Bootstrap section 3" Icon="@(new Icons.Regular.Size24.AppsAddIn())">
+                <FluentNavLink Icon="@(new Icons.Regular.Size24.AppsList())" Tooltip="Bootstrap dropdown" Href="bootstrap/3/dropdown">Dropdown</FluentNavLink>
+                <FluentNavLink Icon="@(new Icons.Regular.Size24.Battery1())" Tooltip="Bootstrap progress bar" Href="bootstrap/3/progressBar">Progress bar</FluentNavLink>
             </FluentNavGroup>
         </FluentNavMenu>
     </div>
