@@ -4,7 +4,9 @@
 
 @inherits BootstrapBase
 
-@rendermode InteractiveAuto
+@*@rendermode InteractiveAuto*@
+@* désactiver le pre-rendu *@
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
 
 <!--
             Super petit <576px  Petit ≥576px    Moyen ≥768px    Grand ≥992px    X - Grand ≥1200px   XX - Grand ≥1400px
@@ -89,4 +91,9 @@ else if (Section == 2 && Partie == "gridSystem" && Exemple == 2 )
 @if (Section == 3 && Partie == "modal" && Exemple is null)
 {
     <BootstrapModal></BootstrapModal>
+}
+
+@if (Section == 3 && Partie == "navbar" && Exemple is null)
+{
+    <BootstrapNavBar2></BootstrapNavBar2>
 }
