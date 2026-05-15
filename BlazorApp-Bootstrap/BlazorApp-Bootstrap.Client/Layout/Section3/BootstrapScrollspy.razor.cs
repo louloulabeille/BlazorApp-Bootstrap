@@ -6,6 +6,11 @@ namespace BlazorApp_Bootstrap.Client.Layout.Section3
 {
     public class BootstrapScrollspyBase : ComponentBase, IDisposable
     {
+        /// <summary>
+        /// tout cela pour faire marcher le scrollspy de bootstrap dans l'application blazor
+        /// il faut faire appel de 2 fonction javascript car le systeme blazor intercepte les lien href
+        /// des balises <a> pour faire du routage
+        /// </summary>
         #region properties inject 
         [Inject] public IJSRuntime JSRuntime { get; set; } = default!;
         [Inject] public NavigationManager Nav { get; set; } = default!;
