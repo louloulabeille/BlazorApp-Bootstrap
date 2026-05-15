@@ -1,0 +1,88 @@
+﻿@* sous blazor le routage href est intercepté donc le scrollspy ne marche pas 
+   il faut utiliser une fonction javascript
+*@
+
+@inherits BootstrapScrollspyBase
+
+<nav id="navbar-example2" class="navbar bg-light px-3 mb-3 sticky-top">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1" >First</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2" >Second</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#scrollspyHeading3" >Third</a></li>
+                <li><a class="dropdown-item" href="#scrollspyHeading4" >Fourth</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#scrollspyHeading5" >Fifth</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
+    <h4 id="scrollspyHeading1">First heading</h4>
+    <p>
+        vestibulum. Praesent finibus lorem eu sem luctus, ac efficitur augue bibendum. Nulla sit amet venenatis ipsum, at vestibulum augue. Aenean at dolor in mi porta posuere ut non diam. Cras pretium tortor nibh, et molestie ligula laoreet vitae. Donec ultricies ligula lorem, sit amet fermentum quam faucibus at. Phasellus dignissim, diam nec laoreet porttitor, odio lectus elementum magna, luctus euismod velit nisi fringilla quam. Maecenas ut libero eu eros egestas dictum. Nullam vitae bibendum augue. Integer scelerisque ligula felis, quis ultricies urna semper ac. Sed aliquet dui eget dui dignissim facilisis.
+
+        Vivamus tellus est, commodo sit amet felis eget, cursus malesuada mauris. Praesent id massa sed felis venenatis laoreet sed et purus. Nulla ut varius erat. Integer facilisis, ipsum in vestibulum scelerisque, felis lectus posuere nibh, vitae laoreet eros nisi ut purus. Maecenas scelerisque nec justo eget porta. Proin commodo quam metus. Phasellus at faucibus ex. Nunc condimentum eu ante ac posuere.
+
+        Proin sed est nunc. Aenean laoreet neque sed lectus auctor commodo. Duis euismod lorem at magna maximus, a euismod tellus rutrum. Nulla sollicitudin, erat ac molestie luctus, nibh dolor semper velit, vitae ultrices lorem est porta mi. Vestibulum in consectetur nibh, eleifend pretium odio. Curabitur tincidunt nisl ac metus iaculis, blandit malesuada mauris malesuada. Donec iaculis leo sit amet mi suscipit, non ullamcorper magna tristique.
+
+        Maecenas eu urna non quam malesuada ultricies. Suspendisse vestibulum nec arcu vitae congue. Integer nec tempus turpis. Vivamus efficitur lacus orci, in pellentesque mauris vestibulum non. Nullam pharetra enim eu molestie ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin molestie, diam eu accumsan dictum, justo orci varius lacus, nec mattis neque massa vitae sapien. Curabitur et rhoncus mauris, vitae interdum neque. Phasellus posuere velit vel purus dictum fermentum. Phasellus maximus posuere posuere.
+
+        Suspendisse sagittis id nisi sit amet feugiat. Morbi dapibus, metus sed iaculis tincidunt, nunc nisi pharetra augue, in fermentum erat dolor eget purus. Morbi non mattis metus. Quisque finibus nunc id ipsum suscipit volutpat. Vestibulum imperdiet mi ac erat lobortis, et tristique tellus mattis. Mauris eget lacus nunc. Donec eu convallis ligula. Sed faucibus tincidunt elit, vel laoreet tellus egestas vitae. Nam hendrerit elit at egestas sollicitudin. Donec sed mauris nunc. Donec pretium augue nisi, ac semper leo interdum sed. Suspendisse quam libero, auctor ac commodo et, fermentum ornare mauris. Ut placerat porttitor rutrum. Aenean feugiat augue et magna consequat, quis commodo dui interdum. Quisque vel consequat nisi. Nunc nec erat fringilla, consectetur libero a, facilisis nibh.
+    </p>
+    <h4 id="scrollspyHeading2">Second heading</h4>
+    <p>
+        vestibulum. Praesent finibus lorem eu sem luctus, ac efficitur augue bibendum. Nulla sit amet venenatis ipsum, at vestibulum augue. Aenean at dolor in mi porta posuere ut non diam. Cras pretium tortor nibh, et molestie ligula laoreet vitae. Donec ultricies ligula lorem, sit amet fermentum quam faucibus at. Phasellus dignissim, diam nec laoreet porttitor, odio lectus elementum magna, luctus euismod velit nisi fringilla quam. Maecenas ut libero eu eros egestas dictum. Nullam vitae bibendum augue. Integer scelerisque ligula felis, quis ultricies urna semper ac. Sed aliquet dui eget dui dignissim facilisis.
+
+        Vivamus tellus est, commodo sit amet felis eget, cursus malesuada mauris. Praesent id massa sed felis venenatis laoreet sed et purus. Nulla ut varius erat. Integer facilisis, ipsum in vestibulum scelerisque, felis lectus posuere nibh, vitae laoreet eros nisi ut purus. Maecenas scelerisque nec justo eget porta. Proin commodo quam metus. Phasellus at faucibus ex. Nunc condimentum eu ante ac posuere.
+
+        Proin sed est nunc. Aenean laoreet neque sed lectus auctor commodo. Duis euismod lorem at magna maximus, a euismod tellus rutrum. Nulla sollicitudin, erat ac molestie luctus, nibh dolor semper velit, vitae ultrices lorem est porta mi. Vestibulum in consectetur nibh, eleifend pretium odio. Curabitur tincidunt nisl ac metus iaculis, blandit malesuada mauris malesuada. Donec iaculis leo sit amet mi suscipit, non ullamcorper magna tristique.
+
+        Maecenas eu urna non quam malesuada ultricies. Suspendisse vestibulum nec arcu vitae congue. Integer nec tempus turpis. Vivamus efficitur lacus orci, in pellentesque mauris vestibulum non. Nullam pharetra enim eu molestie ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin molestie, diam eu accumsan dictum, justo orci varius lacus, nec mattis neque massa vitae sapien. Curabitur et rhoncus mauris, vitae interdum neque. Phasellus posuere velit vel purus dictum fermentum. Phasellus maximus posuere posuere.
+
+        Suspendisse sagittis id nisi sit amet feugiat. Morbi dapibus, metus sed iaculis tincidunt, nunc nisi pharetra augue, in fermentum erat dolor eget purus. Morbi non mattis metus. Quisque finibus nunc id ipsum suscipit volutpat. Vestibulum imperdiet mi ac erat lobortis, et tristique tellus mattis. Mauris eget lacus nunc. Donec eu convallis ligula. Sed faucibus tincidunt elit, vel laoreet tellus egestas vitae. Nam hendrerit elit at egestas sollicitudin. Donec sed mauris nunc. Donec pretium augue nisi, ac semper leo interdum sed. Suspendisse quam libero, auctor ac commodo et, fermentum ornare mauris. Ut placerat porttitor rutrum. Aenean feugiat augue et magna consequat, quis commodo dui interdum. Quisque vel consequat nisi. Nunc nec erat fringilla, consectetur libero a, facilisis nibh.
+    </p>
+    <h4 id="scrollspyHeading3">Third heading</h4>
+    <p>
+        vestibulum. Praesent finibus lorem eu sem luctus, ac efficitur augue bibendum. Nulla sit amet venenatis ipsum, at vestibulum augue. Aenean at dolor in mi porta posuere ut non diam. Cras pretium tortor nibh, et molestie ligula laoreet vitae. Donec ultricies ligula lorem, sit amet fermentum quam faucibus at. Phasellus dignissim, diam nec laoreet porttitor, odio lectus elementum magna, luctus euismod velit nisi fringilla quam. Maecenas ut libero eu eros egestas dictum. Nullam vitae bibendum augue. Integer scelerisque ligula felis, quis ultricies urna semper ac. Sed aliquet dui eget dui dignissim facilisis.
+
+        Vivamus tellus est, commodo sit amet felis eget, cursus malesuada mauris. Praesent id massa sed felis venenatis laoreet sed et purus. Nulla ut varius erat. Integer facilisis, ipsum in vestibulum scelerisque, felis lectus posuere nibh, vitae laoreet eros nisi ut purus. Maecenas scelerisque nec justo eget porta. Proin commodo quam metus. Phasellus at faucibus ex. Nunc condimentum eu ante ac posuere.
+
+        Proin sed est nunc. Aenean laoreet neque sed lectus auctor commodo. Duis euismod lorem at magna maximus, a euismod tellus rutrum. Nulla sollicitudin, erat ac molestie luctus, nibh dolor semper velit, vitae ultrices lorem est porta mi. Vestibulum in consectetur nibh, eleifend pretium odio. Curabitur tincidunt nisl ac metus iaculis, blandit malesuada mauris malesuada. Donec iaculis leo sit amet mi suscipit, non ullamcorper magna tristique.
+
+        Maecenas eu urna non quam malesuada ultricies. Suspendisse vestibulum nec arcu vitae congue. Integer nec tempus turpis. Vivamus efficitur lacus orci, in pellentesque mauris vestibulum non. Nullam pharetra enim eu molestie ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin molestie, diam eu accumsan dictum, justo orci varius lacus, nec mattis neque massa vitae sapien. Curabitur et rhoncus mauris, vitae interdum neque. Phasellus posuere velit vel purus dictum fermentum. Phasellus maximus posuere posuere.
+
+        Suspendisse sagittis id nisi sit amet feugiat. Morbi dapibus, metus sed iaculis tincidunt, nunc nisi pharetra augue, in fermentum erat dolor eget purus. Morbi non mattis metus. Quisque finibus nunc id ipsum suscipit volutpat. Vestibulum imperdiet mi ac erat lobortis, et tristique tellus mattis. Mauris eget lacus nunc. Donec eu convallis ligula. Sed faucibus tincidunt elit, vel laoreet tellus egestas vitae. Nam hendrerit elit at egestas sollicitudin. Donec sed mauris nunc. Donec pretium augue nisi, ac semper leo interdum sed. Suspendisse quam libero, auctor ac commodo et, fermentum ornare mauris. Ut placerat porttitor rutrum. Aenean feugiat augue et magna consequat, quis commodo dui interdum. Quisque vel consequat nisi. Nunc nec erat fringilla, consectetur libero a, facilisis nibh.
+    </p>
+    <h4 id="scrollspyHeading4">Fourth heading</h4>
+    <p>
+        vestibulum. Praesent finibus lorem eu sem luctus, ac efficitur augue bibendum. Nulla sit amet venenatis ipsum, at vestibulum augue. Aenean at dolor in mi porta posuere ut non diam. Cras pretium tortor nibh, et molestie ligula laoreet vitae. Donec ultricies ligula lorem, sit amet fermentum quam faucibus at. Phasellus dignissim, diam nec laoreet porttitor, odio lectus elementum magna, luctus euismod velit nisi fringilla quam. Maecenas ut libero eu eros egestas dictum. Nullam vitae bibendum augue. Integer scelerisque ligula felis, quis ultricies urna semper ac. Sed aliquet dui eget dui dignissim facilisis.
+
+        Vivamus tellus est, commodo sit amet felis eget, cursus malesuada mauris. Praesent id massa sed felis venenatis laoreet sed et purus. Nulla ut varius erat. Integer facilisis, ipsum in vestibulum scelerisque, felis lectus posuere nibh, vitae laoreet eros nisi ut purus. Maecenas scelerisque nec justo eget porta. Proin commodo quam metus. Phasellus at faucibus ex. Nunc condimentum eu ante ac posuere.
+
+        Proin sed est nunc. Aenean laoreet neque sed lectus auctor commodo. Duis euismod lorem at magna maximus, a euismod tellus rutrum. Nulla sollicitudin, erat ac molestie luctus, nibh dolor semper velit, vitae ultrices lorem est porta mi. Vestibulum in consectetur nibh, eleifend pretium odio. Curabitur tincidunt nisl ac metus iaculis, blandit malesuada mauris malesuada. Donec iaculis leo sit amet mi suscipit, non ullamcorper magna tristique.
+
+        Maecenas eu urna non quam malesuada ultricies. Suspendisse vestibulum nec arcu vitae congue. Integer nec tempus turpis. Vivamus efficitur lacus orci, in pellentesque mauris vestibulum non. Nullam pharetra enim eu molestie ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin molestie, diam eu accumsan dictum, justo orci varius lacus, nec mattis neque massa vitae sapien. Curabitur et rhoncus mauris, vitae interdum neque. Phasellus posuere velit vel purus dictum fermentum. Phasellus maximus posuere posuere.
+
+        Suspendisse sagittis id nisi sit amet feugiat. Morbi dapibus, metus sed iaculis tincidunt, nunc nisi pharetra augue, in fermentum erat dolor eget purus. Morbi non mattis metus. Quisque finibus nunc id ipsum suscipit volutpat. Vestibulum imperdiet mi ac erat lobortis, et tristique tellus mattis. Mauris eget lacus nunc. Donec eu convallis ligula. Sed faucibus tincidunt elit, vel laoreet tellus egestas vitae. Nam hendrerit elit at egestas sollicitudin. Donec sed mauris nunc. Donec pretium augue nisi, ac semper leo interdum sed. Suspendisse quam libero, auctor ac commodo et, fermentum ornare mauris. Ut placerat porttitor rutrum. Aenean feugiat augue et magna consequat, quis commodo dui interdum. Quisque vel consequat nisi. Nunc nec erat fringilla, consectetur libero a, facilisis nibh.
+    </p>
+    <h4 id="scrollspyHeading5">Fifth heading</h4>
+    <p>
+        vestibulum. Praesent finibus lorem eu sem luctus, ac efficitur augue bibendum. Nulla sit amet venenatis ipsum, at vestibulum augue. Aenean at dolor in mi porta posuere ut non diam. Cras pretium tortor nibh, et molestie ligula laoreet vitae. Donec ultricies ligula lorem, sit amet fermentum quam faucibus at. Phasellus dignissim, diam nec laoreet porttitor, odio lectus elementum magna, luctus euismod velit nisi fringilla quam. Maecenas ut libero eu eros egestas dictum. Nullam vitae bibendum augue. Integer scelerisque ligula felis, quis ultricies urna semper ac. Sed aliquet dui eget dui dignissim facilisis.
+
+        Vivamus tellus est, commodo sit amet felis eget, cursus malesuada mauris. Praesent id massa sed felis venenatis laoreet sed et purus. Nulla ut varius erat. Integer facilisis, ipsum in vestibulum scelerisque, felis lectus posuere nibh, vitae laoreet eros nisi ut purus. Maecenas scelerisque nec justo eget porta. Proin commodo quam metus. Phasellus at faucibus ex. Nunc condimentum eu ante ac posuere.
+
+        Proin sed est nunc. Aenean laoreet neque sed lectus auctor commodo. Duis euismod lorem at magna maximus, a euismod tellus rutrum. Nulla sollicitudin, erat ac molestie luctus, nibh dolor semper velit, vitae ultrices lorem est porta mi. Vestibulum in consectetur nibh, eleifend pretium odio. Curabitur tincidunt nisl ac metus iaculis, blandit malesuada mauris malesuada. Donec iaculis leo sit amet mi suscipit, non ullamcorper magna tristique.
+
+        Maecenas eu urna non quam malesuada ultricies. Suspendisse vestibulum nec arcu vitae congue. Integer nec tempus turpis. Vivamus efficitur lacus orci, in pellentesque mauris vestibulum non. Nullam pharetra enim eu molestie ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin molestie, diam eu accumsan dictum, justo orci varius lacus, nec mattis neque massa vitae sapien. Curabitur et rhoncus mauris, vitae interdum neque. Phasellus posuere velit vel purus dictum fermentum. Phasellus maximus posuere posuere.
+
+        Suspendisse sagittis id nisi sit amet feugiat. Morbi dapibus, metus sed iaculis tincidunt, nunc nisi pharetra augue, in fermentum erat dolor eget purus. Morbi non mattis metus. Quisque finibus nunc id ipsum suscipit volutpat. Vestibulum imperdiet mi ac erat lobortis, et tristique tellus mattis. Mauris eget lacus nunc. Donec eu convallis ligula. Sed faucibus tincidunt elit, vel laoreet tellus egestas vitae. Nam hendrerit elit at egestas sollicitudin. Donec sed mauris nunc. Donec pretium augue nisi, ac semper leo interdum sed. Suspendisse quam libero, auctor ac commodo et, fermentum ornare mauris. Ut placerat porttitor rutrum. Aenean feugiat augue et magna consequat, quis commodo dui interdum. Quisque vel consequat nisi. Nunc nec erat fringilla, consectetur libero a, facilisis nibh.
+    </p>
+</div>

@@ -1,6 +1,4 @@
-﻿@using Icons = Microsoft.FluentUI.AspNetCore.Components.Icons
-
-<FluentStack Orientation="Orientation.Horizontal" Width="18%">
+﻿<FluentStack Orientation="Orientation.Horizontal" Width="18%">
     <div style="background: var(--neutral-layer-3); display: flex; padding: 10px;">
         <FluentNavMenu @bind-Expanded="@Expanded" Width="250" Collapsible="true" CollapsedChildNavigation="@EnableCollapsedChildNavigation" Title="Bootstrap">
             <!-- racine -->
@@ -32,6 +30,7 @@
                 <FluentNavLink Icon="@(new Icons.Regular.Size24.TooltipQuote())" Tooltip="Bootstrap tooltip" Href="bootstrap/3/tooltip">Info bulle</FluentNavLink>
                 <FluentNavLink Icon="@(new Icons.Regular.Size24.WindowNew())" Tooltip="Bootstrap fenêtre modal" Href="bootstrap/3/modal">Fenêtre modal</FluentNavLink>
                 <FluentNavLink Icon="@(new Icons.Regular.Size24.Navigation())" Tooltip="Bootstrap barre de navigation" Href="bootstrap/3/navbar">Barre de navigation</FluentNavLink>
+                <FluentNavLink Icon="@(new Icons.Regular.Size24.PhoneVerticalScroll())" Tooltip="Bootstrap scrollspy" Href="bootstrap/3/scrollspy">Scrollspy</FluentNavLink>
             </FluentNavGroup>
         </FluentNavMenu>
     </div>

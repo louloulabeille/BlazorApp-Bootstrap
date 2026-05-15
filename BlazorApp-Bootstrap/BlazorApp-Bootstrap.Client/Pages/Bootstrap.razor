@@ -6,9 +6,10 @@
 
 @*@rendermode InteractiveAuto*@
 @* désactiver le pre-rendu *@
+
 @rendermode @(new InteractiveServerRenderMode(prerender: false))
 
-<!--
+@* systeme responsive
             Super petit <576px  Petit ≥576px    Moyen ≥768px    Grand ≥992px    X - Grand ≥1200px   XX - Grand ≥1400px
 .container              100 %   540px           720px           960px           1140px              1320px
 .container - sm         100 %   540px           720px           960px           1140px              1320px
@@ -17,8 +18,7 @@
 .container - xl         100 %   100 %           100 %           100 %           1140px              1320px
 .container - xxl        100 %   100 %           100 %           100 %           100 %               1320px
 .container - fluid      100 %   100 %           100 %           100 %           100 %               100 %
-
--->
+*@
 
 @if (Section == 2 && Partie == "container" && Exemple is null)
 {
@@ -96,4 +96,9 @@ else if (Section == 2 && Partie == "gridSystem" && Exemple == 2 )
 @if (Section == 3 && Partie == "navbar" && Exemple is null)
 {
     <BootstrapNavBar2></BootstrapNavBar2>
+}
+
+@if (Section == 3 && Partie == "scrollspy" && Exemple is null)
+{
+    <BootstrapScrollspy></BootstrapScrollspy>
 }
