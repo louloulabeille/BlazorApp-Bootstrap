@@ -4,4 +4,6 @@
   <Project Path="BlazorApp-Bootstrap.Models/BlazorApp-Bootstrap.Models.csproj" />
   <Project Path="BlazorApp-Bootstrap/BlazorApp-Bootstrap.Client/BlazorApp-Bootstrap.Client.csproj" />
   <Project Path="BlazorApp-Bootstrap/BlazorApp-Bootstrap/BlazorApp-Bootstrap.csproj" />
+  <Project Path="BlazorApp_Bootstrap_CV/BlazorApp_Bootstrap_CV.Client/BlazorApp_Bootstrap_CV.Client.csproj" Id="c9ea1e9e-7e99-4068-89a6-7daa272af333" />
+  <Project Path="BlazorApp_Bootstrap_CV/BlazorApp_Bootstrap_CV/BlazorApp_Bootstrap_CV.csproj" Id="d2e4d50d-271e-47d0-b8e7-b731db009d91" />
 </Solution>
