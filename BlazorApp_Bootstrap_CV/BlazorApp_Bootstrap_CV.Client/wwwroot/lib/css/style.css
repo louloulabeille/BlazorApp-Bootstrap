@@ -1,2 +1,40 @@
-﻿body {
+﻿
+
+/* Général */
+/* changement de la font family sur toutes la page */
+body {
+    font-family: 'Lato', sans-serif !important;
+}
+
+/* en gras pour les titres */
+h1,h2,h3,h3,h4,h5,h6 {
+    font-weight: bold;
+}
+
+/* taille maximale 100% de l'image et hauteur auto  */
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* spécifique */
+/* background rouge */
+.about {
+    background-color: #D82C2E;
+}
+
+
+/* changement de la color sur la nav-active */
+.active {
+    background-color: #CF595B !important;
+}
+
+/* photo profil taille */
+#photo-Profil {
+    width: 50px;
+}
+
+/* changement de la couleur de la police quand on passe dessus avec la souris*/
+section .btn-outline-light {
+    --bs-btn-hover-color: #D82C2E !important;
 }
