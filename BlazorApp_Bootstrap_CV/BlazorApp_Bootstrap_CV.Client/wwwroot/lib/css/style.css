@@ -58,8 +58,6 @@ section .btn-outline-light {
     --bs-btn-hover-color: #D82C2E !important;
 }
 
-
-
 /* barre de compétence à afficher */
 .barre {
     height: 40px !important;
@@ -84,4 +82,8 @@ section .btn-outline-light {
 /* section expérience professionnelle */
 #scrollspyExperience h3 {
     color: white;
+}
+
+.card h3{
+    color: black;
 }
