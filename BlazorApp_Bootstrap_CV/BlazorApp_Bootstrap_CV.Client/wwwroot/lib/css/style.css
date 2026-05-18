@@ -35,13 +35,13 @@ img{
 
 /* spécifique */
 /* background rouge */
-.about {
+.even {
     background-color: #D82C2E;
 }
-.competence {
+
+.odd {
     background-color: white;
 }
-
 
 /* changement de la color sur la nav-active */
 .active {
@@ -68,19 +68,19 @@ section .btn-outline-light {
 }
 
 /* titre de compétence */
-.competence h3 {
+.odd h3 {
     color: #D82C2E;
 }
 
 /* titre des compétences mis en majuscule */
-.competence h5 {
+#scrollspySkills h5 {
     text-transform: uppercase;
     text-shadow: 1px 1px 1px black;
     margin-top: 3px;
 }
 
 /* section expérience professionnelle */
-#scrollspyExperience h3 {
+.even h3 {
     color: white;
 }
 
