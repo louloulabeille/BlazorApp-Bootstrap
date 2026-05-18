@@ -17,6 +17,22 @@ img{
     height: auto;
 }
 
+/* trait de séparation dans la section compétence */
+.dividerRed {
+    margin: 0 auto;
+    width: 100px;
+    text-align: center;
+    border: 1.5px solid #D82C2E;
+}
+
+/* trait de séparation dans la section compétence */
+.dividerWhite {
+    margin: 0 auto;
+    width: 100px;
+    text-align: center;
+    border: 1.5px solid white;
+}
+
 /* spécifique */
 /* background rouge */
 .about {
@@ -42,13 +58,7 @@ section .btn-outline-light {
     --bs-btn-hover-color: #D82C2E !important;
 }
 
-/* trait de séparation dans la section compétence */
-.trait {
-    margin: 0 auto;
-    width: 100px;
-    text-align: center;
-    border: 1.5px solid #D82C2E;
-}
+
 
 /* barre de compétence à afficher */
 .barre {
@@ -62,4 +72,16 @@ section .btn-outline-light {
 /* titre de compétence */
 .competence h3 {
     color: #D82C2E;
+}
+
+/* titre des compétences mis en majuscule */
+.competence h5 {
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px black;
+    margin-top: 3px;
+}
+
+/* section expérience professionnelle */
+#scrollspyExperience h3 {
+    color: white;
 }
