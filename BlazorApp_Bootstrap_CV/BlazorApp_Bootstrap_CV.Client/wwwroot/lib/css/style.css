@@ -22,6 +22,9 @@ img{
 .about {
     background-color: #D82C2E;
 }
+.competence {
+    background-color: white;
+}
 
 
 /* changement de la color sur la nav-active */
@@ -37,4 +40,26 @@ img{
 /* changement de la couleur de la police quand on passe dessus avec la souris*/
 section .btn-outline-light {
     --bs-btn-hover-color: #D82C2E !important;
+}
+
+/* trait de séparation dans la section compétence */
+.trait {
+    margin: 0 auto;
+    width: 100px;
+    text-align: center;
+    border: 1.5px solid #D82C2E;
+}
+
+/* barre de compétence à afficher */
+.barre {
+    height: 40px !important;
+}
+
+.barre div {
+    background-color: #D82C2E !important;
+}
+
+/* titre de compétence */
+.competence h3 {
+    color: #D82C2E;
 }
