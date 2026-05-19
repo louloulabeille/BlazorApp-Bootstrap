@@ -33,15 +33,27 @@ img{
     border: 1.5px solid white;
 }
 
-/* spécifique */
-/* background rouge */
+/* background pair rouge */
 .even {
     background-color: #D82C2E;
 }
 
+/* background impair blanc */
 .odd {
     background-color: white;
 }
+
+/*  titre pair blanc */
+.even h3 {
+    color: white;
+}
+
+/* titre impair en rouge */
+.odd h3 {
+    color: #D82C2E;
+}
+
+/****************Fin général*********************/
 
 /* changement de la color sur la nav-active */
 .active {
@@ -67,11 +79,6 @@ section .btn-outline-light {
     background-color: #D82C2E !important;
 }
 
-/* titre de compétence */
-.odd h3 {
-    color: #D82C2E;
-}
-
 /* titre des compétences mis en majuscule */
 #scrollspySkills h5 {
     text-transform: uppercase;
@@ -79,11 +86,10 @@ section .btn-outline-light {
     margin-top: 3px;
 }
 
-/* section expérience professionnelle */
-.even h3 {
-    color: white;
-}
-
 .card h3{
     color: black;
+}
+
+.no-margin-b {
+    margin: 0;
 }
