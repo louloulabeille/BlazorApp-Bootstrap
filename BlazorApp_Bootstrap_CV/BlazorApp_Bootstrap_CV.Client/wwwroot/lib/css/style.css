@@ -53,8 +53,19 @@ img{
     color: #D82C2E;
 }
 
+/* enleve les marges sur des éléments */
+.no-margin {
+    margin: 0;
+}
+
+/* cellule des cards body en background modifié */
+.card-body {
+    background-color: #E9ECEF;
+}
+
 /****************Fin général*********************/
 
+/* barre de nav */
 /* changement de la color sur la nav-active */
 .active {
     background-color: #CF595B !important;
@@ -69,6 +80,10 @@ img{
 section .btn-outline-light {
     --bs-btn-hover-color: #D82C2E !important;
 }
+
+/********fin nav*************/
+
+/* compétence */
 
 /* barre de compétence à afficher */
 .barre {
@@ -91,15 +106,10 @@ section .btn-outline-light {
     color: black;
 }
 
-/* enleve les marges sur des éléments */
-.no-margin {
-    margin: 0;
-}
+/********fin compétence*******************/
 
 /* education */
-.card-body {
-    background-color: lightgrey;
-}
+
 
 .card-body span{
     font-size: x-small;
@@ -113,4 +123,17 @@ section .btn-outline-light {
 .card-text {
     font-size: small;
     margin: 15px;
+}
+
+/*********education**********/
+
+/* portfolio */
+
+.img-hover-focus {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.img-hover-focus:hover{
+    filter: grayscale(0%);
 }
