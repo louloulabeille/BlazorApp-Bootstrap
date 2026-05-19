@@ -67,7 +67,7 @@ img{
 
 /* barre de nav */
 /* changement de la color sur la nav-active */
-.active {
+.nav-pills .nav-link.active {
     background-color: #CF595B !important;
 }
 
@@ -131,9 +131,19 @@ section .btn-outline-light {
 
 .img-hover-focus {
     filter: grayscale(100%);
+    -webkit-filter : grayscale(100%); /* pour le navigateur IOS */
     transition: filter 0.3s ease;
 }
 
-.img-hover-focus:hover{
+.img-hover-focus:hover {
     filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+
+/******* fin portfolio *********/
+
+/* recommandation */
+.carousel-item h4{
+    color: red;
+    font-style: italic;
 }
