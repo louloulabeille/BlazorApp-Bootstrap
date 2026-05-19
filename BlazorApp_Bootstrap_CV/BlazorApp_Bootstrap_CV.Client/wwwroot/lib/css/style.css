@@ -86,10 +86,31 @@ section .btn-outline-light {
     margin-top: 3px;
 }
 
+/* test color en noir */
 .card h3{
     color: black;
 }
 
-.no-margin-b {
+/* enleve les marges sur des éléments */
+.no-margin {
     margin: 0;
+}
+
+/* education */
+.card-body {
+    background-color: lightgrey;
+}
+
+.card-body span{
+    font-size: x-small;
+    color: grey;
+}
+
+.card-title {
+    color: #D82C2E !important;
+}
+
+.card-text {
+    font-size: small;
+    margin: 15px;
 }
