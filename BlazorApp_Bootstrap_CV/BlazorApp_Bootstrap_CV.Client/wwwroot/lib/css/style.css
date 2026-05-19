@@ -147,3 +147,23 @@ section .btn-outline-light {
     color: red;
     font-style: italic;
 }
+
+/*********fin recommandation***********/
+
+/* footer */
+
+.div-footer {
+    height: 100px;
+    background-color: #363332;
+}
+
+.div-footer span {
+    font-size: 1.5rem;
+    color: cornflowerblue;
+}
+
+.div-footer:last-child a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
