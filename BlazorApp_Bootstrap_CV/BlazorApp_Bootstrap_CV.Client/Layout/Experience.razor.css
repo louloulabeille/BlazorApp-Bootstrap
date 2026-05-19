@@ -6,27 +6,27 @@
     background-color: #D82C2E;
 }
 
-#timeline h3{
-    color: black;
-}
+    #timeline h3 {
+        color: black;
+    }
 
-#timeline h6 {
-    color: red;
-    padding: 0;
-    margin: 0;
-}
+    #timeline h6 {
+        color: red;
+        padding: 0;
+        margin: 0;
+    }
 
-#timeline span {
-    font-size: x-small;
-    padding: 0;
-    margin: 0;
-    color: darkgrey;
-}
+    #timeline span {
+        font-size: x-small;
+        padding: 0;
+        margin: 0;
+        color: darkgrey;
+    }
 
-#timeline p {
-    font-size: smaller;
-    padding-top: 5px;
-}
+    #timeline p {
+        font-size: smaller;
+        padding-top: 5px;
+    }
 /*********/
 
 
